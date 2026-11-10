@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Studio Teduh – Arsitektur &amp; Interior</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#E7EBE5; --surface:#F4F6F1; --ink:#15271F; --muted:#4A5B53;
+  --line:rgba(21,39,31,.28); --accent:#D9A21B; --on-accent:#15271F;
+  --serif:'Young Serif',Georgia,'Times New Roman',serif;
+  --sans:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10201A; --surface:#172B23; --ink:#E7EBE5; --muted:#9DB0A5;
+    --line:rgba(231,235,229,.28); --accent:#E2AE3A; --on-accent:#10201A; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10201A; --surface:#172B23; --ink:#E7EBE5; --muted:#9DB0A5;
+  --line:rgba(231,235,229,.28); --accent:#E2AE3A; --on-accent:#10201A; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+
+/* header */
+header{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
+.logo{font-family:var(--serif);font-size:1.35rem;text-decoration:none}
+nav{display:flex;gap:clamp(1rem,3vw,2.25rem);font-weight:500;font-size:.98rem}
+nav a{text-decoration:none;padding:.25rem 0;background:linear-gradient(var(--accent),var(--accent)) 0 100%/0 2px no-repeat;transition:background-size .25s}
+nav a:hover{background-size:100% 2px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(1.5rem,5vw,4rem);align-items:end;padding:clamp(2rem,6vw,5rem) 0 clamp(3rem,7vw,6rem)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,6.4vw,5.6rem);line-height:1.02;letter-spacing:-.02em;margin:0 0 1.75rem}
+.lead{max-width:34rem;color:var(--muted);margin:0 0 2rem}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:600;transition:background .2s,color .2s}
+.btn:hover{background:var(--accent);color:var(--on-accent)}
+.elev{width:100%;height:auto;display:block}
+.elev .ln{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s .2s cubic-bezier(.6,.1,.2,1) forwards}
+.elev .thin{stroke-width:.9;opacity:.6}
+.elev .glow{fill:var(--accent);opacity:0;animation:fade .8s 2.1s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{to{opacity:1}}
+
+/* sections */
+section{padding:clamp(3rem,7vw,6rem) 0;border-top:1px solid var(--line)}
+.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(1.5rem,5vw,4rem)}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.12;margin:0;letter-spacing:-.01em}
+.prose p{margin:0 0 1.2rem;max-width:38rem}
+.prose p:last-child{margin-bottom:0}
+
+/* layanan */
+.rows{list-style:none;margin:0;padding:0}
+.rows li{display:grid;grid-template-columns:minmax(9rem,.55fr) 1fr;gap:1.5rem;padding:1.6rem 0;border-bottom:1px solid var(--line)}
+.rows li:first-child{padding-top:0}
+.rows h3{font-family:var(--serif);font-weight:400;font-size:1.4rem;margin:0}
+.rows p{margin:0;color:var(--muted);max-width:34rem}
+
+/* proyek */
+.proj{width:100%;border-collapse:collapse}
+.proj th{text-align:left;font-weight:500;color:var(--muted);font-size:.92rem;padding:0 1rem .8rem 0;border-bottom:1px solid var(--ink)}
+.proj td{padding:1.15rem 1rem 1.15rem 0;border-bottom:1px solid var(--line);vertical-align:baseline;transition:background .2s}
+.proj td:first-child{font-family:var(--serif);font-size:1.25rem}
+.proj tbody tr:hover td{background:var(--accent);color:var(--on-accent)}
+.scroll{overflow-x:auto}
+.proj th:last-child,.proj td:last-child{text-align:right;padding-right:0}
+
+/* kontak */
+.contact{background:var(--ink);color:var(--bg);border-top:0;border-radius:1.5rem;padding:clamp(2rem,5vw,4rem);margin-bottom:clamp(2rem,5vw,4rem)}
+.contact h2{color:var(--bg);max-width:22rem}
+.mail{font-family:var(--serif);font-size:clamp(1.4rem,3.4vw,2.4rem);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:.3em;text-decoration-thickness:2px;word-break:break-word}
+.contact p{margin:1.2rem 0 0;opacity:.85}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding:0 0 2.5rem;color:var(--muted);font-size:.93rem}
+
+/* responsif */
+body{overflow-x:clip}
+h1,h2,h3{overflow-wrap:break-word}
+header{position:relative;gap:1rem}
+.menu{display:none;font:inherit;font-weight:600;background:none;color:var(--ink);border:1px solid var(--ink);border-radius:999px;padding:.55rem 1.1rem;min-height:44px;cursor:pointer}
+@media (min-width:1440px){.wrap{max-width:1280px}body{font-size:1.125rem}}
+@media (max-width:820px){
+  .hero{padding-top:1.25rem}
+  .elev{max-width:340px;margin:0 auto}
+}
+@media (max-width:720px){
+  header{flex-wrap:wrap}
+  nav{flex-wrap:wrap;gap:.25rem 1.25rem;width:100%}
+  .nav-js nav{display:none;position:absolute;top:calc(100% + .25rem);left:0;right:0;flex-direction:column;gap:0;width:auto;background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:.4rem 1.25rem;z-index:40}
+  .nav-js header.open nav{display:flex}
+  .nav-js .menu{display:inline-flex;align-items:center}
+  .nav-js nav a{padding:.9rem 0;border-bottom:1px solid var(--line);background-image:none}
+  .nav-js nav a:last-child{border-bottom:0}
+  .nav-js nav a.active{font-weight:600}
+}
+@media (max-width:600px){
+  .proj thead{display:none}
+  .proj tr{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid var(--line)}
+  .proj td{border:0;padding:.1rem .6rem;grid-column:1}
+  .proj td:first-child{padding-top:1rem}
+  .proj td:nth-child(2),.proj td:nth-child(3){color:var(--muted)}
+  .proj td:nth-child(3){padding-bottom:1rem}
+  .proj td:nth-child(4){grid-column:2;grid-row:1;padding-top:1rem;padding-right:.6rem}
+  .proj tbody tr:hover{background:var(--accent)}
+  .proj tbody tr:hover td{background:transparent}
+  .contact{border-radius:1.1rem;padding:1.75rem 1.4rem}
+}
+@media (max-width:520px){
+  .steps li{grid-template-columns:2.4rem 1fr;gap:.75rem}
+  .btn{display:block;text-align:center}
+  footer{flex-direction:column;gap:.25rem}
+}
+@media (hover:none){.proj tbody tr:hover,.proj tbody tr:hover td{background:transparent;color:inherit}}
+/* animasi scroll */
+.progress{position:fixed;top:env(safe-area-inset-top,0px);left:0;width:100%;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:0 50%;z-index:50;pointer-events:none}
+.js [data-r]{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js [data-r].in{opacity:1;transform:none}
+.js h2[data-r]{transform:translateY(40px);clip-path:inset(0 0 100% 0);transition:opacity .9s ease,transform 1s cubic-bezier(.2,.7,.2,1),clip-path 1s cubic-bezier(.2,.7,.2,1)}
+.js h2[data-r].in{clip-path:inset(-10% 0 -10% 0)}
+.js .vals div[data-r]{border-top-color:transparent}
+.js .vals div[data-r].in{border-top-color:var(--ink);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1),border-color .9s .2s}
+nav a.active{background-size:100% 2px}
+.elev{will-change:transform}
+/* tambahan */
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:3.2rem 1fr;gap:1rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.steps li:first-child{padding-top:0}
+.steps li::before{content:counter(s);font-family:var(--serif);font-size:1.9rem;line-height:1.1;color:var(--muted)}
+.steps h3{font-family:var(--serif);font-weight:400;font-size:1.35rem;margin:0 0 .3rem}
+.steps p{margin:0;color:var(--muted);max-width:34rem}
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,4vw,3rem);margin-top:3rem}
+.vals div{border-top:2px solid var(--ink);padding-top:1.1rem}
+.vals h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;margin:0 0 .5rem}
+.vals p{margin:0;color:var(--muted)}
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1.25rem,3vw,2.5rem);margin-top:2.5rem}
+.team div{border-top:1px solid var(--line);padding-top:1rem}
+.team b{display:block;font-family:var(--serif);font-weight:400;font-size:1.2rem}
+.team span{display:block;color:var(--muted);font-size:.95rem;margin:.15rem 0 .6rem}
+.team p{margin:0;font-size:.97rem}
+blockquote{margin:0;padding:0}
+blockquote p{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.85rem);line-height:1.35;margin:0 0 1rem;max-width:40rem}
+blockquote footer{display:block;padding:0;color:var(--muted);font-size:.95rem}
+.quotes{display:grid;gap:clamp(2.5rem,5vw,4rem)}
+.quotes blockquote:nth-child(2){margin-left:clamp(0rem,12vw,10rem)}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--ink)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;padding:1.25rem 0;font-weight:600}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font-size:1.5rem;line-height:1;transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 1.4rem;max-width:38rem;color:var(--muted)}
+@media (max-width:820px){.vals,.team{grid-template-columns:1fr 1fr}.quotes blockquote:nth-child(2){margin-left:0}}
+@media (max-width:520px){.vals,.team{grid-template-columns:1fr}}
+@media (max-width:820px){
+  .hero,.split{grid-template-columns:1fr}
+  .rows li{grid-template-columns:1fr;gap:.4rem}
+  nav{font-size:.92rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .elev .ln{animation:none;stroke-dashoffset:0}
+  .elev .glow{animation:none;opacity:1}
+}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<div class="wrap">
+  <header>
+    <a class="logo" href="#top">Studio Teduh</a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#tim">Tim</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>Bangunan yang makin nyaman dihuni seiring waktu.</h1>
+        <p class="lead">Kami studio arsitektur dan interior di Jakarta. Kami merancang rumah, kantor, dan ruang komunitas yang tahan iklim tropis, hemat perawatan, dan jujur pada bahannya.</p>
+        <a class="btn" href="#kontak">Ceritakan proyek Anda</a>
+      </div>
+      <svg class="elev" viewBox="0 0 400 460" role="img" aria-label="Sketsa tampak depan sebuah rumah dengan jendela lengkung dan atap miring">
+        <circle class="glow" cx="200" cy="318" r="0"/>
+        <path class="glow" d="M162 400V330a38 38 0 0 1 76 0V400Z"/>
+        <path class="ln" pathLength="1" d="M10 400H390"/>
+        <path class="ln" pathLength="1" d="M60 400V190L200 90L340 190V400"/>
+        <path class="ln" pathLength="1" d="M40 190L200 76L360 190"/>
+        <path class="ln" pathLength="1" d="M162 400V330a38 38 0 0 1 76 0V400"/>
+        <path class="ln" pathLength="1" d="M90 250a24 24 0 0 1 48 0V300H90Z"/>
+        <path class="ln" pathLength="1" d="M262 250a24 24 0 0 1 48 0V300H262Z"/>
+        <path class="ln thin" pathLength="1" d="M200 292V400M162 346H238"/>
+        <path class="ln thin" pathLength="1" d="M60 220H340"/>
+        <path class="ln" pathLength="1" d="M150 400V412H250V400"/>
+        <path class="ln thin" pathLength="1" d="M362 400V340M362 340a28 28 0 1 1 .1 0"/>
+      </svg>
+    </div>
+  </main>
+
+  <section id="tentang">
+    <div class="split">
+      <h2>Kami mulai dari cara orang benar-benar memakai ruang.</h2>
+      <div class="prose">
+        <p>Studio Teduh berdiri pada 2012 dengan satu pertanyaan: bagaimana membuat bangunan yang tetap sejuk tanpa bergantung pada pendingin ruangan? Jawabannya hampir selalu ada di hal sederhana, seperti arah bukaan, tebal dinding, dan teritisan atap yang cukup lebar.</p>
+        <p>Tim kami terdiri dari 14 arsitek, desainer interior, dan pengawas lapangan. Kami mengerjakan proyek dari gambar pertama sampai serah terima, sehingga yang membuat desain juga yang memastikan desain itu terbangun dengan benar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="layanan">
+    <div class="split">
+      <h2>Yang kami kerjakan</h2>
+      <ul class="rows">
+        <li><h3>Arsitektur</h3><p>Rumah tinggal, kantor kecil, dan bangunan komersial, dari konsep sampai gambar kerja dan izin bangunan.</p></li>
+        <li><h3>Interior</h3><p>Tata ruang, furnitur custom, dan pemilihan bahan yang mudah dirawat dan menua dengan baik.</p></li>
+        <li><h3>Renovasi</h3><p>Menata ulang bangunan lama agar lebih terang, lebih sejuk, dan lebih sesuai dengan cara penghuninya hidup sekarang.</p></li>
+        <li><h3>Pengawasan</h3><p>Kunjungan lapangan rutin, pemeriksaan mutu pekerjaan, dan laporan progres yang bisa dibaca pemilik tanpa latar teknik.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="proyek">
+    <h2 style="margin-bottom:2.5rem">Proyek terpilih</h2>
+    <div class="scroll">
+      <table class="proj">
+        <thead><tr><th scope="col">Nama proyek</th><th scope="col">Jenis</th><th scope="col">Lokasi</th><th scope="col">Tahun</th></tr></thead>
+        <tbody>
+          <tr><td>Rumah Lorong</td><td>Rumah tinggal</td><td>Depok</td><td>2024</td></tr>
+          <tr><td>Kantor Gandaria</td><td>Kantor</td><td>Jakarta Selatan</td><td>2023</td></tr>
+          <tr><td>Balai Warga Kebon</td><td>Ruang komunitas</td><td>Bogor</td><td>2022</td></tr>
+          <tr><td>Kedai Pelataran</td><td>Interior kafe</td><td>Tangerang</td><td>2021</td></tr>
+          <tr><td>Rumah Dua Halaman</td><td>Renovasi</td><td>Bekasi</td><td>2019</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="prinsip">
+    <h2 style="max-width:30rem">Tiga hal yang kami pegang di setiap proyek.</h2>
+    <div class="vals">
+      <div><h3>Bahan apa adanya</h3><p>Bata, kayu, beton, dan kapur kami biarkan terlihat jelas. Bahan yang jujur lebih awet daripada lapisan yang menutupinya.</p></div>
+      <div><h3>Iklim lebih dulu</h3><p>Sebelum memilih bentuk, kami mempelajari arah matahari, angin, dan curah hujan di lahan Anda.</p></div>
+      <div><h3>Anggaran terbuka</h3><p>Setiap keputusan desain disertai perkiraan biayanya, jadi tidak ada kejutan saat pembangunan berjalan.</p></div>
+    </div>
+  </section>
+
+  <section id="proses">
+    <div class="split">
+      <h2>Dari obrolan pertama sampai kunci diserahkan</h2>
+      <ol class="steps">
+        <li><div><h3>Kunjungan dan diskusi</h3><p>Kami datang ke lokasi, mendengar kebutuhan keluarga atau tim Anda, lalu menyepakati batas anggaran dan jadwal.</p></div></li>
+        <li><div><h3>Konsep dan denah</h3><p>Anda menerima dua sampai tiga alternatif denah beserta maket studi. Satu dipilih, lalu disempurnakan bersama.</p></div></li>
+        <li><div><h3>Gambar kerja dan izin</h3><p>Kami menyiapkan gambar teknis, rincian bahan, rencana anggaran biaya, dan mengurus persetujuan bangunan.</p></div></li>
+        <li><div><h3>Pembangunan</h3><p>Kami mengawasi di lapangan setiap minggu dan mengirim laporan foto agar Anda tahu kemajuan tanpa harus hadir.</p></div></li>
+        <li><div><h3>Serah terima dan perawatan</h3><p>Bangunan diperiksa bersama, dan Anda mendapat panduan perawatan serta kunjungan evaluasi setelah enam bulan.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="tim">
+    <div class="split" style="grid-template-columns:1fr">
+      <h2 style="max-width:28rem">Orang-orang di balik gambar.</h2>
+    </div>
+    <div class="team">
+      <div><b>Raka Pramudya</b><span>Pendiri, arsitek utama</span><p>Lulusan arsitektur yang gemar membaca rumah-rumah lama di pesisir utara Jawa.</p></div>
+      <div><b>Laras Wulandari</b><span>Kepala interior</span><p>Merancang furnitur custom dan selalu membawa sampel bahan ke setiap rapat.</p></div>
+      <div><b>Dimas Aryo</b><span>Manajer proyek</span><p>Memastikan jadwal dan anggaran tetap sesuai, dan sering ada di lokasi sebelum tukang tiba.</p></div>
+      <div><b>Nadia Hartono</b><span>Arsitek lanskap</span><p>Menata halaman, ventilasi alami, dan tanaman yang cocok untuk setiap sisi bangunan.</p></div>
+    </div>
+  </section>
+
+  <section id="kata-klien">
+    <div class="quotes">
+      <blockquote><p>Rumah kami tidak pernah terasa panas, bahkan saat Oktober. Dua tahun tinggal di sini, listrik pendingin hampir tidak terpakai.</p><footer>Bu Anindita, pemilik Rumah Lorong</footer></blockquote>
+      <blockquote><p>Mereka menjelaskan biaya sejak awal dan menepatinya. Itu yang paling jarang kami temui di dunia konstruksi.</p><footer>Pak Hendra, direktur Kantor Gandaria</footer></blockquote>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="split">
+      <h2>Pertanyaan yang sering kami terima</h2>
+      <div>
+        <details><summary>Berapa biaya jasa desain?</summary><p>Tergantung luas dan kerumitan. Umumnya antara 5 sampai 8 persen dari perkiraan biaya bangunan. Rinciannya kami berikan tertulis setelah kunjungan pertama.</p></details>
+        <details><summary>Apakah kalian menangani proyek di luar Jabodetabek?</summary><p>Ya, selama jadwal kunjungan lapangan bisa diatur. Untuk lokasi jauh, kami bekerja dengan pengawas setempat yang kami kenal.</p></details>
+        <details><summary>Berapa lama dari desain sampai bangunan jadi?</summary><p>Rumah tinggal biasanya butuh dua sampai tiga bulan untuk desain dan izin, lalu enam sampai dua belas bulan untuk pembangunan.</p></details>
+        <details><summary>Bisakah kalian hanya mengerjakan interior?</summary><p>Bisa. Kami menerima proyek interior terpisah, termasuk untuk bangunan yang tidak kami rancang.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak" class="contact">
+    <h2>Punya lahan atau bangunan yang ingin ditata?</h2>
+    <p style="margin-bottom:1.5rem">Kirim lokasi, kebutuhan ruang, dan perkiraan anggaran. Kami balas dalam dua hari kerja.</p>
+    <a class="mail" href="mailto:halo@studioteduh.example">halo@studioteduh.example</a>
+    <p>Jl. Cikajang No. 18, Jakarta Selatan. Senin sampai Jumat, 09.00–17.00 WIB.</p>
+  </section>
+
+  <footer>
+    <span>© 2026 Studio Teduh</span>
+    <span>Contoh halaman profil perusahaan</span>
+  </footer>
+</div>
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+
+  // Elemen yang muncul saat di-scroll; jeda berurutan antar saudara
+  var sel = 'section h2, .prose, .lead, .rows li, .steps li, .vals div, .team div, blockquote, details, .proj tbody tr, .contact .mail, .contact p';
+  var els = document.querySelectorAll(sel);
+  els.forEach(function(el){
+    var sibs = Array.prototype.filter.call(el.parentNode.children, function(c){ return c.matches(sel); });
+    var i = sibs.indexOf(el);
+    el.style.setProperty('--d', Math.min(i * 0.09, 0.45) + 's');
+    el.setAttribute('data-r', '');
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(el){ io.observe(el); });
+
+  // Garis progres, geser ringan pada sketsa, dan tautan menu aktif
+  var bar = document.querySelector('.progress');
+  var svg = document.querySelector('.elev');
+  var ticking = false;
+  function onScroll(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var y = window.scrollY;
+    bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(y / h, 1) : 0) + ')';
+    if (svg && y < window.innerHeight) svg.style.transform = 'translateY(' + (y * 0.1) + 'px)';
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking){ ticking = true; requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  onScroll();
+
+  var links = {};
+  document.querySelectorAll('nav a').forEach(function(a){ links[a.getAttribute('href').slice(1)] = a; });
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){
+        Object.keys(links).forEach(function(k){ links[k].classList.remove('active'); });
+        if (links[e.target.id]) links[e.target.id].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  document.querySelectorAll('section[id]').forEach(function(s){ spy.observe(s); });
+})();
+</script>
+<script>
+(function(){
+  var root = document.documentElement, header = document.querySelector('header');
+  var btn = document.querySelector('.menu');
+  if (!header || !btn) return;
+  root.classList.add('nav-js');
+  function set(open){
+    header.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? 'Tutup' : 'Menu';
+  }
+  btn.addEventListener('click', function(){ set(!header.classList.contains('open')); });
+  header.querySelectorAll('nav a').forEach(function(a){ a.addEventListener('click', function(){ set(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') set(false); });
+  window.addEventListener('resize', function(){ if (window.innerWidth > 720) set(false); });
+})();
+</script>
+</body>
+</html>
