@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Layanan – Studio Teduh</title>
+  <meta name="description" content="Layanan desain arsitektur, interior kustom, renovasi bangunan, dan pengawasan proyek berkala di Studio Teduh.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <!-- Header & Navigasi -->
+    <header>
+      <a class="logo" href="index.html">
+        <span class="logo-dot"></span>Studio Teduh
+      </a>
+      <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" aria-label="Navigasi utama">
+        <a class="nav-link" href="index.html">Beranda</a>
+        <a class="nav-link" href="tentang.html">Tentang</a>
+        <a class="nav-link active" href="layanan.html">Layanan</a>
+        <a class="nav-link" href="projek.html">Proyek</a>
+        <a class="nav-link" href="tim.html">Tim</a>
+        <a class="nav-link" href="kontak.html">Kontak</a>
+        <div class="nav-actions">
+          <a class="nav-btn" href="login.html">Masuk</a>
+          <a class="nav-btn nav-btn-primary" href="register.html">Daftar</a>
+        </div>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti tema terang/gelap">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <span class="badge">Layanan Desain Terpadu</span>
+      <h1>Pendekatan terpadu dari sketsa awal hingga serah terima kunci.</h1>
+      <p>Kami memastikan gagasan desain di atas kertas terbangun dengan presisi, jujur pada anggarannya, dan nyaman dihuni bertahun-tahun kemudian.</p>
+    </div>
+
+    <main>
+      <!-- Layanan 4 Grid -->
+      <section style="border-top:none; padding-top:1rem;">
+        <div class="services-grid">
+          <!-- Layanan 1 -->
+          <div class="card service-card">
+            <div class="service-img-wrapper">
+              <img class="service-card-img" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80" alt="Layanan Desain Arsitektur Tropis">
+            </div>
+            <div class="service-card-body">
+              <span class="badge" style="align-self:flex-start">Arsitektur</span>
+              <h3>Desain Arsitektur Penuh</h3>
+              <p>Perancangan menyeluruh rumah tinggal baru, villa peristirahatan, dan kantor butik. Fokus kami adalah orientasi tapak terhadap arah angin dan matahari tropis.</p>
+              <ul class="service-features">
+                <li>Analisis mikroklimat lahan &amp; studi pencahayaan alami</li>
+                <li>Desain konseptual, maket studi &amp; visualisasi render 3D realistis</li>
+                <li>Gambar Kerja Teknis Detail Engineering Design (DED) lengkap</li>
+                <li>Penyusunan Rencana Anggaran Biaya (RAB) dan pendampingan PBG</li>
+              </ul>
+              <a class="btn" href="kontak.html" style="align-self:flex-start">Konsultasikan Rumah Anda →</a>
+            </div>
+          </div>
+
+          <!-- Layanan 2 -->
+          <div class="card service-card">
+            <div class="service-img-wrapper">
+              <img class="service-card-img" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80" alt="Layanan Desain Interior & Furnitur Custom">
+            </div>
+            <div class="service-card-body">
+              <span class="badge" style="align-self:flex-start">Interior</span>
+              <h3>Interior &amp; Furnitur Custom</h3>
+              <p>Merancang suasana ruang dalam yang hangat dan fungsional. Kami memilih material yang menua dengan indah seperti kayu jati, rotan alami, dan teraso lokal.</p>
+              <ul class="service-features">
+                <li>Zonasi tata letak ruang (space planning) &amp; alur ergonomi harian</li>
+                <li>Perancangan furnitur built-in bespoke (kitchen set, kabinet, rak partisi)</li>
+                <li>Skema pencahayaan hangat &amp; pemilihan fitting saniter</li>
+                <li>Supervisi kualitas perakitan di workshop pengrajin</li>
+              </ul>
+              <a class="btn" href="kontak.html" style="align-self:flex-start">Konsultasikan Interior →</a>
+            </div>
+          </div>
+
+          <!-- Layanan 3 -->
+          <div class="card service-card">
+            <div class="service-img-wrapper">
+              <img class="service-card-img" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" alt="Layanan Renovasi Bangunan Lama">
+            </div>
+            <div class="service-card-body">
+              <span class="badge" style="align-self:flex-start">Renovasi</span>
+              <h3>Renovasi &amp; Penataan Ulang</h3>
+              <p>Menghidupkan kembali bangunan tua yang gelap, pengap, atau sudah tidak lagi sesuai dengan gaya hidup penghuni saat ini tanpa harus merobohkan seluruh struktur.</p>
+              <ul class="service-features">
+                <li>Audit kondisi struktur dan kelayakan pondasi lama</li>
+                <li>Pembukaan void sirkulasi udara dan penambahan inner garden</li>
+                <li>Rekayasa ulang pencahayaan alami tanpa merusak struktur utama</li>
+                <li>Efisiensi biaya dengan memanfaatkan elemen bangunan yang masih kuat</li>
+              </ul>
+              <a class="btn" href="kontak.html" style="align-self:flex-start">Diskusikan Renovasi →</a>
+            </div>
+          </div>
+
+          <!-- Layanan 4 -->
+          <div class="card service-card">
+            <div class="service-img-wrapper">
+              <img class="service-card-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" alt="Layanan Pengawasan Berkala Proyek">
+            </div>
+            <div class="service-card-body">
+              <span class="badge" style="align-self:flex-start">Pengawasan</span>
+              <h3>Pengawasan Lapangan &amp; Supervisi</h3>
+              <p>Mendampingi pemilik proyek di lapangan agar proses konstruksi benar-benar setia pada gambar kerja, presisi bahan, dan tepat waktu.</p>
+              <ul class="service-features">
+                <li>Inspeksi mingguan rutin oleh arsitek perancang</li>
+                <li>Pemeriksaan mutu campuran semen, tulangan besi, dan presisi bata</li>
+                <li>Laporan progres foto digital yang mudah dipahami pemilik proyek</li>
+                <li>Evaluasi akhir dan pendampingan serah terima kunci</li>
+              </ul>
+              <a class="btn" href="kontak.html" style="align-self:flex-start">Tanya Pengawasan Proyek →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alur Proses Kerja 5 Tahap -->
+      <section>
+        <div class="split">
+          <div>
+            <span class="badge">Alur Kerja Kami</span>
+            <h2>Dari obrolan pertama sampai kunci diserahkan ke tangan Anda.</h2>
+            <p class="lead">Kami membagi perjalanan perancangan menjadi 5 fase terukur agar proses berjalan tertib dan menyenangkan bagi Anda.</p>
+          </div>
+          <div>
+            <ol class="steps">
+              <li>
+                <div>
+                  <h3>Kunjungan &amp; Diskusi Kebutuhan</h3>
+                  <p>Kami meninjau lokasi lahan Anda, menyimak pola aktivitas harian keluarga, serta menyepakati batasan anggaran dan garis waktu pelaksanaan.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Konsep Sketsa &amp; Alternatif Denah</h3>
+                  <p>Anda mendapatkan 2–3 alternatif denah tata ruang beserta visualisasi maket studi 3D. Satu opsi dipilih untuk dimatangkan bersama.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Gambar Kerja Teknis &amp; RAB Final</h3>
+                  <p>Kami menyusun dokumen teknis (arsitektur, struktur, MEP), rincian bahan material, serta perhitungan anggaran biaya terperinci hingga ke satuan paku.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Pembangunan &amp; Pengawasan Berkala</h3>
+                  <p>Arsitek kami mengawasi pekerjaan tukang setiap minggu. Anda mendapatkan pembaruan laporan progres secara transparan melalui portal digital.</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Pemeriksaan Serah Terima &amp; Masa Garansi</h3>
+                  <p>Bangunan diinspeksi secara menyeluruh bersama Anda. Kami memberikan buku panduan perawatan material serta evaluasi berkala setelah 6 bulan.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Biaya & FAQ -->
+      <section>
+        <div class="split">
+          <div>
+            <span class="badge">Transparansi</span>
+            <h2>Pertanyaan umum seputar layanan &amp; biaya jasa</h2>
+            <p style="color:var(--muted)">Kami percaya keterbukaan di awal adalah kunci kepuasan jangka panjang.</p>
+          </div>
+          <div>
+            <details open>
+              <summary>Berapa perkiraan biaya jasa desain arsitektur?</summary>
+              <p>Biaya jasa desain di Studio Teduh umumnya berkisar antara 5% hingga 8% dari estimasi total biaya konstruksi fisik, atau skema tarif per meter persegi luas bangunan tergantung pada kerumitan tapak. Rincian penawaran tertulis kami serahkan setelah kunjungan perdana.</p>
+            </details>
+            <details>
+              <summary>Apakah Studio Teduh melayani proyek di luar Jabodetabek?</summary>
+              <p>Ya, kami menerima proyek di berbagai kota di Indonesia. Untuk lokasi di luar Jabodetabek, jadwal kunjungan lapangan dan survei tapak akan disesuaikan secara berkala.</p>
+            </details>
+            <details>
+              <summary>Bisakah saya memesan jasa desain interior saja?</summary>
+              <p>Tentu bisa. Kami memiliki divisi khusus yang menangani penataan interior dan pembuatan furnitur kustom untuk rumah baru maupun apartemen yang sudah berdiri.</p>
+            </details>
+            <details>
+              <summary>Berapa lama waktu yang dibutuhkan untuk proses desain?</summary>
+              <p>Untuk rumah tinggal tipikal (luas 150–400 m²), tahapan desain konsep hingga gambar kerja DED lengkap biasanya memakan waktu 2 hingga 3 bulan sebelum tender konstruksi dimulai.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Banner -->
+      <div class="cta-banner">
+        <div>
+          <h2>Siap mendiskusikan kebutuhan ruang Anda?</h2>
+          <p>Isi formulir pendaftaran proyek atau hubungi kami langsung via WhatsApp untuk menjadwalkan sesi temu pertama.</p>
+        </div>
+        <a class="btn" href="kontak.html">Isi Formulir Konsultasi →</a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Studio Teduh</h3>
+          <p>Praktik arsitektur dan interior berkelanjutan di Jakarta. Menciptakan hunian dan ruang komunitas yang sejuk, jujur, dan lestari.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Halaman</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="projek.html">Portofolio</a></li>
+            <li><a href="tim.html">Tim Studio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Akses Klien</h4>
+          <ul>
+            <li><a href="kontak.html">Formulir Konsultasi</a></li>
+            <li><a href="login.html">Masuk Portal</a></li>
+            <li><a href="register.html">Daftar Akun Klien</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <p style="margin-bottom:0.5rem">Jl. Cikajang No. 18, Kebayoran Baru, Jakarta Selatan 12170</p>
+          <p><a href="mailto:halo@studioteduh.example">halo@studioteduh.example</a><br>+62 21 726 8920</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Studio Teduh. Seluruh hak cipta dilindungi.</span>
+        <span>Arsitektur &amp; Interior Tropis Bersahaja</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

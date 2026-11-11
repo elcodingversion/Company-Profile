@@ -1,157 +1,302 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Studio Teduh – Arsitektur &amp; Interior</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Studio Teduh – Arsitektur &amp; Interior Tropis</title>
+  <meta name="description" content="Studio arsitektur dan desain interior di Jakarta yang merancang ruang tahan iklim tropis, hemat energi, dan jujur pada bahannya.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="progress" aria-hidden="true"></div>
-<div class="wrap">
-  <header>
-    <a class="logo" href="#top">Studio Teduh</a>
-    <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-    <nav id="nav" aria-label="Navigasi utama">
-      <a href="#tentang">Tentang</a>
-      <a href="#layanan">Layanan</a>
-      <a href="#proyek">Proyek</a>
-      <a href="#tim">Tim</a>
-      <a href="#kontak">Kontak</a>
-    </nav>
-  </header>
+  <div class="progress" aria-hidden="true"></div>
 
-  <main id="top">
-    <div class="hero">
-      <div>
-        <h1>Bangunan yang makin nyaman dihuni seiring waktu.</h1>
-        <p class="lead">Kami studio arsitektur dan interior di Jakarta. Kami merancang rumah, kantor, dan ruang komunitas yang tahan iklim tropis, hemat perawatan, dan jujur pada bahannya.</p>
-        <a class="btn" href="#kontak">Ceritakan proyek Anda</a>
+  <div class="wrap">
+    <!-- Header & Navigasi -->
+    <header>
+      <a class="logo" href="index.html">
+        <span class="logo-dot"></span>Studio Teduh
+      </a>
+      <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" aria-label="Navigasi utama">
+        <a class="nav-link active" href="index.html">Beranda</a>
+        <a class="nav-link" href="tentang.html">Tentang</a>
+        <a class="nav-link" href="layanan.html">Layanan</a>
+        <a class="nav-link" href="projek.html">Proyek</a>
+        <a class="nav-link" href="tim.html">Tim</a>
+        <a class="nav-link" href="kontak.html">Kontak</a>
+        <div class="nav-actions">
+          <a class="nav-btn" href="login.html">Masuk</a>
+          <a class="nav-btn nav-btn-primary" href="register.html">Daftar</a>
+        </div>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti tema terang/gelap">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+      <div class="hero">
+        <div>
+          <span class="badge">Studio Arsitektur &amp; Interior</span>
+          <h1>Bangunan yang makin nyaman dihuni seiring waktu.</h1>
+          <p class="lead">Kami studio arsitektur dan interior di Jakarta. Kami merancang rumah tinggal, kantor butik, dan ruang komunitas yang ramah iklim tropis, sejuk alami, hemat perawatan, dan berakar pada kejujuran material.</p>
+          <div class="hero-actions">
+            <a class="btn" href="kontak.html">Mulai Konsultasi →</a>
+            <a class="btn btn-outline" href="projek.html">Lihat Portofolio</a>
+          </div>
+        </div>
+
+        <div class="hero-visual-card">
+          <img class="hero-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Arsitektur rumah tropis modern dengan kisi kayu dan taman hijau asri" loading="eager">
+          <div class="hero-sketch-box">
+            <svg class="elev" viewBox="0 0 400 460" role="img" aria-label="Sketsa tampak depan hunian tropis">
+              <circle class="glow" cx="200" cy="318" r="0"/>
+              <path class="glow" d="M162 400V330a38 38 0 0 1 76 0V400Z"/>
+              <path class="ln" pathLength="1" d="M10 400H390"/>
+              <path class="ln" pathLength="1" d="M60 400V190L200 90L340 190V400"/>
+              <path class="ln" pathLength="1" d="M40 190L200 76L360 190"/>
+              <path class="ln" pathLength="1" d="M162 400V330a38 38 0 0 1 76 0V400"/>
+              <path class="ln" pathLength="1" d="M90 250a24 24 0 0 1 48 0V300H90Z"/>
+              <path class="ln" pathLength="1" d="M262 250a24 24 0 0 1 48 0V300H262Z"/>
+              <path class="ln thin" pathLength="1" d="M200 292V400M162 346H238"/>
+              <path class="ln thin" pathLength="1" d="M60 220H340"/>
+              <path class="ln" pathLength="1" d="M150 400V412H250V400"/>
+              <path class="ln thin" pathLength="1" d="M362 400V340M362 340a28 28 0 1 1 .1 0"/>
+            </svg>
+          </div>
+        </div>
       </div>
-      <svg class="elev" viewBox="0 0 400 460" role="img" aria-label="Sketsa tampak depan sebuah rumah dengan jendela lengkung dan atap miring">
-        <circle class="glow" cx="200" cy="318" r="0"/>
-        <path class="glow" d="M162 400V330a38 38 0 0 1 76 0V400Z"/>
-        <path class="ln" pathLength="1" d="M10 400H390"/>
-        <path class="ln" pathLength="1" d="M60 400V190L200 90L340 190V400"/>
-        <path class="ln" pathLength="1" d="M40 190L200 76L360 190"/>
-        <path class="ln" pathLength="1" d="M162 400V330a38 38 0 0 1 76 0V400"/>
-        <path class="ln" pathLength="1" d="M90 250a24 24 0 0 1 48 0V300H90Z"/>
-        <path class="ln" pathLength="1" d="M262 250a24 24 0 0 1 48 0V300H262Z"/>
-        <path class="ln thin" pathLength="1" d="M200 292V400M162 346H238"/>
-        <path class="ln thin" pathLength="1" d="M60 220H340"/>
-        <path class="ln" pathLength="1" d="M150 400V412H250V400"/>
-        <path class="ln thin" pathLength="1" d="M362 400V340M362 340a28 28 0 1 1 .1 0"/>
-      </svg>
-    </div>
-  </main>
 
-  <section id="tentang">
-    <div class="split">
-      <h2>Kami mulai dari cara orang benar-benar memakai ruang.</h2>
-      <div class="prose">
-        <p>Studio Teduh berdiri pada 2012 dengan satu pertanyaan: bagaimana membuat bangunan yang tetap sejuk tanpa bergantung pada pendingin ruangan? Jawabannya hampir selalu ada di hal sederhana, seperti arah bukaan, tebal dinding, dan teritisan atap yang cukup lebar.</p>
-        <p>Tim kami terdiri dari 14 arsitek, desainer interior, dan pengawas lapangan. Kami mengerjakan proyek dari gambar pertama sampai serah terima, sehingga yang membuat desain juga yang memastikan desain itu terbangun dengan benar.</p>
+      <!-- Stats Strip -->
+      <div class="stats-strip">
+        <div class="stat-item">
+          <div class="stat-number">14+</div>
+          <div class="stat-label">Tahun Praktik Desain</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">72+</div>
+          <div class="stat-label">Karya Terbangun</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">14</div>
+          <div class="stat-label">Arsitek &amp; Desainer</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Kepuasan Klien Kami</div>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <section id="layanan">
-    <div class="split">
-      <h2>Yang kami kerjakan</h2>
-      <ul class="rows">
-        <li><h3>Arsitektur</h3><p>Rumah tinggal, kantor kecil, dan bangunan komersial, dari konsep sampai gambar kerja dan izin bangunan.</p></li>
-        <li><h3>Interior</h3><p>Tata ruang, furnitur custom, dan pemilihan bahan yang mudah dirawat dan menua dengan baik.</p></li>
-        <li><h3>Renovasi</h3><p>Menata ulang bangunan lama agar lebih terang, lebih sejuk, dan lebih sesuai dengan cara penghuninya hidup sekarang.</p></li>
-        <li><h3>Pengawasan</h3><p>Kunjungan lapangan rutin, pemeriksaan mutu pekerjaan, dan laporan progres yang bisa dibaca pemilik tanpa latar teknik.</p></li>
-      </ul>
-    </div>
-  </section>
+      <!-- Teaser Tentang Kami -->
+      <section>
+        <div class="split">
+          <div>
+            <span class="badge">Filosofi Desain</span>
+            <h2>Kami mulai dari cara orang benar-benar memakai ruang.</h2>
+            <div class="hero-actions" style="margin-top:1.5rem">
+              <a class="btn btn-outline" href="tentang.html">Pelajari Lebih Lanjut →</a>
+            </div>
+          </div>
+          <div>
+            <p class="lead" style="margin-top:0">Studio Teduh berdiri sejak 2012 dengan satu pertanyaan mendasar: bagaimana merancang ruang yang senantiasa sejuk tanpa harus terus-menerus bergantung pada pendingin buatan?</p>
+            <p style="color:var(--muted)">Jawabannya hampir selalu berakar pada kecermatan dasar: arah orientasi bukaan matahari pagi, cross-ventilation silang yang lancar, teritisan atap yang menaungi dinding, serta pemilihan bahan seperti bata ekspos, kayu jati lokal, dan plesteran kapur alami.</p>
+            <div style="margin-top:2rem; border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--line);">
+              <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1200&q=80" alt="Material bata ekspos dan beton halus Studio Teduh" style="height:280px; width:100%; object-fit:cover;">
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <section id="proyek">
-    <h2 style="margin-bottom:2.5rem">Proyek terpilih</h2>
-    <div class="scroll">
-      <table class="proj">
-        <thead><tr><th scope="col">Nama proyek</th><th scope="col">Jenis</th><th scope="col">Lokasi</th><th scope="col">Tahun</th></tr></thead>
-        <tbody>
-          <tr><td>Rumah Lorong</td><td>Rumah tinggal</td><td>Depok</td><td>2024</td></tr>
-          <tr><td>Kantor Gandaria</td><td>Kantor</td><td>Jakarta Selatan</td><td>2023</td></tr>
-          <tr><td>Balai Warga Kebon</td><td>Ruang komunitas</td><td>Bogor</td><td>2022</td></tr>
-          <tr><td>Kedai Pelataran</td><td>Interior kafe</td><td>Tangerang</td><td>2021</td></tr>
-          <tr><td>Rumah Dua Halaman</td><td>Renovasi</td><td>Bekasi</td><td>2019</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+      <!-- Layanan Unggulan -->
+      <section>
+        <div class="section-head">
+          <div>
+            <span class="badge">Keberlanjutan &amp; Keahlian</span>
+            <h2>Layanan yang kami tawarkan</h2>
+          </div>
+          <a class="btn btn-outline" href="layanan.html">Semua Layanan →</a>
+        </div>
 
-  <section id="prinsip">
-    <h2 style="max-width:30rem">Tiga hal yang kami pegang di setiap proyek.</h2>
-    <div class="vals">
-      <div><h3>Bahan apa adanya</h3><p>Bata, kayu, beton, dan kapur kami biarkan terlihat jelas. Bahan yang jujur lebih awet daripada lapisan yang menutupinya.</p></div>
-      <div><h3>Iklim lebih dulu</h3><p>Sebelum memilih bentuk, kami mempelajari arah matahari, angin, dan curah hujan di lahan Anda.</p></div>
-      <div><h3>Anggaran terbuka</h3><p>Setiap keputusan desain disertai perkiraan biayanya, jadi tidak ada kejutan saat pembangunan berjalan.</p></div>
-    </div>
-  </section>
+        <div class="services-grid">
+          <div class="card service-card">
+            <div class="service-img-wrapper">
+              <img class="service-card-img" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80" alt="Desain Arsitektur Tropis Modern">
+            </div>
+            <div class="service-card-body">
+              <h3>Desain Arsitektur</h3>
+              <p>Perancangan rumah tinggal, villa, kantor butik, dan paviliun komersial dengan pendekatan iklim mikro dan kenyamanan pasif.</p>
+              <ul class="service-features">
+                <li>Analisis orientasi matahari &amp; angin tapak</li>
+                <li>Konsep 3D &amp; gambar kerja teknis (DED) lengkap</li>
+                <li>Penyusunan Rencana Anggaran Biaya (RAB) realistis</li>
+              </ul>
+              <a class="nav-btn" href="layanan.html" style="align-self:flex-start">Lihat Rincian</a>
+            </div>
+          </div>
 
-  <section id="proses">
-    <div class="split">
-      <h2>Dari obrolan pertama sampai kunci diserahkan</h2>
-      <ol class="steps">
-        <li><div><h3>Kunjungan dan diskusi</h3><p>Kami datang ke lokasi, mendengar kebutuhan keluarga atau tim Anda, lalu menyepakati batas anggaran dan jadwal.</p></div></li>
-        <li><div><h3>Konsep dan denah</h3><p>Anda menerima dua sampai tiga alternatif denah beserta maket studi. Satu dipilih, lalu disempurnakan bersama.</p></div></li>
-        <li><div><h3>Gambar kerja dan izin</h3><p>Kami menyiapkan gambar teknis, rincian bahan, rencana anggaran biaya, dan mengurus persetujuan bangunan.</p></div></li>
-        <li><div><h3>Pembangunan</h3><p>Kami mengawasi di lapangan setiap minggu dan mengirim laporan foto agar Anda tahu kemajuan tanpa harus hadir.</p></div></li>
-        <li><div><h3>Serah terima dan perawatan</h3><p>Bangunan diperiksa bersama, dan Anda mendapat panduan perawatan serta kunjungan evaluasi setelah enam bulan.</p></div></li>
-      </ol>
-    </div>
-  </section>
+          <div class="card service-card">
+            <div class="service-img-wrapper">
+              <img class="service-card-img" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80" alt="Desain Interior & Furnitur Custom">
+            </div>
+            <div class="service-card-body">
+              <h3>Interior &amp; Furnitur Custom</h3>
+              <p>Penataan tata ruang dalam, perancangan furnitur built-in berbahan kayu solid, serta pencahayaan alami yang menenangkan.</p>
+              <ul class="service-features">
+                <li>Bespoke joinery &amp; detail perabot tukang</li>
+                <li>Kurasi palet bahan alami dan warna bernuansa tenang</li>
+                <li>Pengawasan produksi workshop furnitur</li>
+              </ul>
+              <a class="nav-btn" href="layanan.html" style="align-self:flex-start">Lihat Rincian</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <section id="tim">
-    <div class="split" style="grid-template-columns:1fr">
-      <h2 style="max-width:28rem">Orang-orang di balik gambar.</h2>
-    </div>
-    <div class="team">
-      <div><b>Raka Pramudya</b><span>Pendiri, arsitek utama</span><p>Lulusan arsitektur yang gemar membaca rumah-rumah lama di pesisir utara Jawa.</p></div>
-      <div><b>Laras Wulandari</b><span>Kepala interior</span><p>Merancang furnitur custom dan selalu membawa sampel bahan ke setiap rapat.</p></div>
-      <div><b>Dimas Aryo</b><span>Manajer proyek</span><p>Memastikan jadwal dan anggaran tetap sesuai, dan sering ada di lokasi sebelum tukang tiba.</p></div>
-      <div><b>Nadia Hartono</b><span>Arsitek lanskap</span><p>Menata halaman, ventilasi alami, dan tanaman yang cocok untuk setiap sisi bangunan.</p></div>
-    </div>
-  </section>
+      <!-- Proyek Terpilih -->
+      <section>
+        <div class="section-head">
+          <div>
+            <span class="badge">Karya Terpilih</span>
+            <h2>Proyek yang telah kami hidupkan</h2>
+          </div>
+          <a class="btn btn-outline" href="projek.html">Jelajahi Semua Proyek →</a>
+        </div>
 
-  <section id="kata-klien">
-    <div class="quotes">
-      <blockquote><p>Rumah kami tidak pernah terasa panas, bahkan saat Oktober. Dua tahun tinggal di sini, listrik pendingin hampir tidak terpakai.</p><footer>Bu Anindita, pemilik Rumah Lorong</footer></blockquote>
-      <blockquote><p>Mereka menjelaskan biaya sejak awal dan menepatinya. Itu yang paling jarang kami temui di dunia konstruksi.</p><footer>Pak Hendra, direktur Kantor Gandaria</footer></blockquote>
-    </div>
-  </section>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-img-box">
+              <img class="project-img" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80" alt="Rumah Lorong di Depok">
+              <span class="project-tag">Residensial</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Depok, Jawa Barat</span>
+                <span>2024</span>
+              </div>
+              <h3>Rumah Lorong</h3>
+              <p>Hunian keluarga memanjang dengan taman koridor tengah yang mengalirkan udara sejuk ke setiap kamar tidur.</p>
+            </div>
+          </article>
 
-  <section id="faq">
-    <div class="split">
-      <h2>Pertanyaan yang sering kami terima</h2>
-      <div>
-        <details><summary>Berapa biaya jasa desain?</summary><p>Tergantung luas dan kerumitan. Umumnya antara 5 sampai 8 persen dari perkiraan biaya bangunan. Rinciannya kami berikan tertulis setelah kunjungan pertama.</p></details>
-        <details><summary>Apakah kalian menangani proyek di luar Jabodetabek?</summary><p>Ya, selama jadwal kunjungan lapangan bisa diatur. Untuk lokasi jauh, kami bekerja dengan pengawas setempat yang kami kenal.</p></details>
-        <details><summary>Berapa lama dari desain sampai bangunan jadi?</summary><p>Rumah tinggal biasanya butuh dua sampai tiga bulan untuk desain dan izin, lalu enam sampai dua belas bulan untuk pembangunan.</p></details>
-        <details><summary>Bisakah kalian hanya mengerjakan interior?</summary><p>Bisa. Kami menerima proyek interior terpisah, termasuk untuk bangunan yang tidak kami rancang.</p></details>
+          <article class="project-card">
+            <div class="project-img-box">
+              <img class="project-img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="Kantor Gandaria di Jakarta Selatan">
+              <span class="project-tag">Komersial</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Jakarta Selatan</span>
+                <span>2023</span>
+              </div>
+              <h3>Kantor Gandaria</h3>
+              <p>Ruang kerja butik kreatif dengan sirkulasi udara bebas dan dinding kisi bata terakota penyaring panas matahari barat.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img-box">
+              <img class="project-img" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Kedai Pelataran di Tangerang">
+              <span class="project-tag">Interior</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Tangerang</span>
+                <span>2021</span>
+              </div>
+              <h3>Kedai Pelataran</h3>
+              <p>Interior kedai kopi berkonsep santai dengan bangku teraso cor lokal dan bukaan jendela putar menghadap pekarangan.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Nilai & Prinsip -->
+      <section>
+        <span class="badge">Prinsip Desain</span>
+        <h2 style="max-width:32rem; margin-bottom:2.5rem">Tiga komitmen yang kami pegang di setiap jengkal desain.</h2>
+        <div class="vals">
+          <div class="val-card">
+            <h3>Bahan Apa Adanya</h3>
+            <p>Bata, kayu jati, beton halus, dan kapur kami biarkan menampakkan tekstur aslinya. Material yang jujur menua dengan anggun tanpa menuntut lapisan penutup kimiawi.</p>
+          </div>
+          <div class="val-card">
+            <h3>Iklim Lebih Dulu</h3>
+            <p>Sebelum memikirkan estetika fasad, kami memetakan arah lintasan matahari, kecepatan angin, dan curahan air hujan di lahan Anda agar rumah sejuk tanpa beban listrik.</p>
+          </div>
+          <div class="val-card">
+            <h3>Anggaran Terbuka</h3>
+            <p>Setiap goresan sketsa kami sertai estimasi biaya yang presisi. Tidak ada kejutan spekulatif saat tukang mulai membangun di lapangan.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimoni Klien -->
+      <section>
+        <div class="quotes">
+          <blockquote>
+            <p>“Rumah kami tidak pernah terasa gerah, bahkan di bulan Oktober yang terik. Dua tahun menghuni Rumah Lorong, listrik pendingin hampir jarang sekali dinyalakan.”</p>
+            <footer>— Bu Anindita, Pemilik Rumah Lorong</footer>
+          </blockquote>
+          <blockquote>
+            <p>“Tim Studio Teduh menjelaskan kalkulasi biaya sejak awal dan benar-benar menepatinya. Ketepatan transparansi ini yang paling langka di industri konstruksi.”</p>
+            <footer>— Pak Hendra, Direktur Kantor Gandaria</footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- CTA Banner -->
+      <div class="cta-banner">
+        <div>
+          <h2>Punya rencana lahan atau ruang yang ingin diwujudkan?</h2>
+          <p>Kirimkan perkiraan lokasi, kebutuhan keluarga Anda, atau diskusikan konsep awal bersama arsitek utama kami.</p>
+        </div>
+        <a class="btn" href="kontak.html">Konsultasi Sekarang →</a>
       </div>
-    </div>
-  </section>
+    </main>
 
-  <section id="kontak" class="contact">
-    <h2>Punya lahan atau bangunan yang ingin ditata?</h2>
-    <p style="margin-bottom:1.5rem">Kirim lokasi, kebutuhan ruang, dan perkiraan anggaran. Kami balas dalam dua hari kerja.</p>
-    <a class="mail" href="mailto:halo@studioteduh.example">halo@studioteduh.example</a>
-    <p>Jl. Cikajang No. 18, Jakarta Selatan. Senin sampai Jumat, 09.00–17.00 WIB.</p>
-  </section>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Studio Teduh</h3>
+          <p>Praktik arsitektur dan interior berkelanjutan di Jakarta. Menciptakan hunian dan ruang komunitas yang sejuk, jujur, dan lestari.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Halaman</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="projek.html">Portofolio</a></li>
+            <li><a href="tim.html">Tim Studio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Akses Klien</h4>
+          <ul>
+            <li><a href="kontak.html">Formulir Konsultasi</a></li>
+            <li><a href="login.html">Masuk Portal</a></li>
+            <li><a href="register.html">Daftar Akun Klien</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <p style="margin-bottom:0.5rem">Jl. Cikajang No. 18, Kebayoran Baru, Jakarta Selatan 12170</p>
+          <p><a href="mailto:halo@studioteduh.example">halo@studioteduh.example</a><br>+62 21 726 8920</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Studio Teduh. Seluruh hak cipta dilindungi.</span>
+        <span>Arsitektur &amp; Interior Tropis Bersahaja</span>
+      </div>
+    </footer>
+  </div>
 
-  <footer>
-    <span>© 2026 Studio Teduh</span>
-    <span>Contoh halaman profil perusahaan</span>
-  </footer>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

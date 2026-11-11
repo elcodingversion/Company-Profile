@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kontak &amp; Pendaftaran Proyek – Studio Teduh</title>
+  <meta name="description" content="Hubungi Studio Teduh untuk konsultasi desain arsitektur, interior, atau isi formulir pendaftaran proyek baru Anda.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <!-- Header & Navigasi -->
+    <header>
+      <a class="logo" href="index.html">
+        <span class="logo-dot"></span>Studio Teduh
+      </a>
+      <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" aria-label="Navigasi utama">
+        <a class="nav-link" href="index.html">Beranda</a>
+        <a class="nav-link" href="tentang.html">Tentang</a>
+        <a class="nav-link" href="layanan.html">Layanan</a>
+        <a class="nav-link" href="projek.html">Proyek</a>
+        <a class="nav-link" href="tim.html">Tim</a>
+        <a class="nav-link active" href="kontak.html">Kontak</a>
+        <div class="nav-actions">
+          <a class="nav-btn" href="login.html">Masuk</a>
+          <a class="nav-btn nav-btn-primary" href="register.html">Daftar</a>
+        </div>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti tema terang/gelap">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <span class="badge">Mari Terhubung</span>
+      <h1>Ceritakan rencana ruang atau ide proyek Anda.</h1>
+      <p>Kirimkan lokasi, gambaran kebutuhan keluarga Anda, atau perkiraan anggaran. Tim arsitek kami akan menelaah dan membalas dalam waktu maksimal dua hari kerja.</p>
+    </div>
+
+    <main>
+      <div class="contact-layout" style="margin-bottom: clamp(3rem, 6vw, 5rem);">
+        <!-- Kolom Kiri: Informasi Kontak & Lokasi -->
+        <div class="contact-info-card">
+          <h2 style="font-size:1.85rem; margin-bottom:1.5rem">Kantor Studio Kami</h2>
+
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-text">
+              <h4>Alamat Studio</h4>
+              <p>Jl. Cikajang No. 18, Kebayoran Baru, Jakarta Selatan 12170</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div class="info-text">
+              <h4>Surel Resmi</h4>
+              <p><a href="mailto:halo@studioteduh.example" style="text-decoration:underline;">halo@studioteduh.example</a></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">💬</div>
+            <div class="info-text">
+              <h4>WhatsApp &amp; Telepon</h4>
+              <p><a href="tel:+62217268920">+62 21 726 8920</a><br><a href="https://wa.me/6281234567890" target="_blank" rel="noopener">+62 812-3456-7890 (Chat Konsultasi)</a></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">🕒</div>
+            <div class="info-text">
+              <h4>Jam Operasional</h4>
+              <p>Senin – Jumat: 09.00 – 17.00 WIB<br>Sabtu: Berdasarkan Perjanjian Kunjungan</p>
+            </div>
+          </div>
+
+          <div style="margin-top:2rem; border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--line);">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Suasana ruang diskusi klien di Studio Teduh Jakarta" style="width:100%; height:200px; object-fit:cover;">
+          </div>
+
+          <div style="margin-top:2rem;">
+            <h4 style="margin:0 0 1rem; font-size:1.1rem; font-family:var(--serif);">Sebelum Mengirim Pesan</h4>
+            <p style="color:var(--muted); font-size:0.92rem; line-height:1.6; margin:0;">Kami menghargai setiap detail informasi yang Anda berikan. Jika sudah memiliki data ukuran lahan, foto eksisting, atau tautan inspirasi Pinterest, silakan sertakan dalam formulir untuk memudahkan telaah awal tim kami.</p>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Formulir Pendaftaran / Kontak Interaktif -->
+        <div class="contact-form-card">
+          <span class="badge">Formulir Proyek</span>
+          <h2 style="font-size:1.85rem; margin-bottom:0.5rem">Daftarkan Rencana Proyek</h2>
+          <p style="color:var(--muted); font-size:0.95rem; margin-bottom:1.75rem">Silakan lengkapi data berikut. Tidak ada komitmen awal apapun sebelum kita bertemu dan sepakat.</p>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nama">Nama Lengkap <span style="color:#E57373">*</span></label>
+                <input class="form-control" type="text" id="nama" name="nama" placeholder="Contoh: Rian Anggoro" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Alamat Email <span style="color:#E57373">*</span></label>
+                <input class="form-control" type="email" id="email" name="email" placeholder="nama@email.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telepon">Nomor WhatsApp / HP <span style="color:#E57373">*</span></label>
+                <input class="form-control" type="tel" id="telepon" name="telepon" placeholder="0812-xxxx-xxxx" required>
+              </div>
+              <div class="form-group">
+                <label for="layanan">Jenis Layanan yang Dibutuhkan</label>
+                <select class="form-control" id="layanan" name="layanan">
+                  <option value="arsitektur">Desain Rumah Tinggal Baru</option>
+                  <option value="interior">Desain Interior &amp; Furnitur Kustom</option>
+                  <option value="renovasi">Renovasi Bangunan Eksisting</option>
+                  <option value="komersial">Kantor Butik / Ruang Komersial</option>
+                  <option value="konsultasi">Konsultasi Tata Tapak &amp; Iklim</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="lokasi">Lokasi Proyek (Kota / Daerah)</label>
+                <input class="form-control" type="text" id="lokasi" name="lokasi" placeholder="Contoh: Jagakarsa, Jakarta Selatan">
+              </div>
+              <div class="form-group">
+                <label for="anggaran">Perkiraan Alokasi Anggaran</label>
+                <select class="form-control" id="anggaran" name="anggaran">
+                  <option value="under500">&lt; Rp 500 Juta</option>
+                  <option value="500-1b">Rp 500 Juta – Rp 1 Miliar</option>
+                  <option value="1b-3b" selected>Rp 1 – Rp 3 Miliar</option>
+                  <option value="over3b">&gt; Rp 3 Miliar</option>
+                  <option value="undecided">Belum Ditentukan / Perlu Diskusi</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="pesan">Ceritakan Kebutuhan Ruang &amp; Harapan Anda <span style="color:#E57373">*</span></label>
+              <textarea class="form-control" id="pesan" name="pesan" rows="4" placeholder="Berapa anggota keluarga yang akan menghuni? Apakah ada kebutuhan khusus seperti ruang kerja terpisah, inner garden, atau ramah lansia?" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="persetujuan" required checked>
+                <span>Saya menyetujui bahwa data ini akan digunakan Studio Teduh semata-mata untuk menghubungi saya perihal konsultasi desain.</span>
+              </label>
+            </div>
+
+            <button class="btn" type="submit" style="width:100%; padding:0.95rem; font-size:1.02rem;">
+              Kirim Permohonan Konsultasi →
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- FAQ Singkat -->
+      <section>
+        <div class="split">
+          <div>
+            <span class="badge">FAQ Kontak</span>
+            <h2>Hal yang sering ditanyakan sebelum memulai</h2>
+          </div>
+          <div>
+            <details>
+              <summary>Apakah sesi konsultasi pertama dikenakan biaya?</summary>
+              <p>Konsultasi awal melalui tatap muka di studio kami atau diskusi daring pertama kali tidak dikenakan biaya (gratis). Biaya survei ke lokasi tapak di luar area Jabodetabek hanya mencakup akomodasi transportasi nyata tim.</p>
+            </details>
+            <details>
+              <summary>Sudah punya akun klien Studio Teduh?</summary>
+              <p>Bagi klien yang proyeknya sedang berjalan, Anda dapat langsung masuk ke <a href="login.html" style="text-decoration:underline; font-weight:600;">Portal Klien</a> untuk melihat arsip gambar kerja dan laporan mingguan terbaru.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Studio Teduh</h3>
+          <p>Praktik arsitektur dan interior berkelanjutan di Jakarta. Menciptakan hunian dan ruang komunitas yang sejuk, jujur, dan lestari.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Halaman</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="projek.html">Portofolio</a></li>
+            <li><a href="tim.html">Tim Studio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Akses Klien</h4>
+          <ul>
+            <li><a href="kontak.html">Formulir Konsultasi</a></li>
+            <li><a href="login.html">Masuk Portal</a></li>
+            <li><a href="register.html">Daftar Akun Klien</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <p style="margin-bottom:0.5rem">Jl. Cikajang No. 18, Kebayoran Baru, Jakarta Selatan 12170</p>
+          <p><a href="mailto:halo@studioteduh.example">halo@studioteduh.example</a><br>+62 21 726 8920</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Studio Teduh. Seluruh hak cipta dilindungi.</span>
+        <span>Arsitektur &amp; Interior Tropis Bersahaja</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

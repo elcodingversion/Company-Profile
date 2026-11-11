@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Proyek &amp; Portofolio – Studio Teduh</title>
+  <meta name="description" content="Eksplorasi karya arsitektur, interior, dan renovasi tropis modern oleh Studio Teduh di Jakarta dan sekitarnya.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <!-- Header & Navigasi -->
+    <header>
+      <a class="logo" href="index.html">
+        <span class="logo-dot"></span>Studio Teduh
+      </a>
+      <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" aria-label="Navigasi utama">
+        <a class="nav-link" href="index.html">Beranda</a>
+        <a class="nav-link" href="tentang.html">Tentang</a>
+        <a class="nav-link" href="layanan.html">Layanan</a>
+        <a class="nav-link active" href="projek.html">Proyek</a>
+        <a class="nav-link" href="tim.html">Tim</a>
+        <a class="nav-link" href="kontak.html">Kontak</a>
+        <div class="nav-actions">
+          <a class="nav-btn" href="login.html">Masuk</a>
+          <a class="nav-btn nav-btn-primary" href="register.html">Daftar</a>
+        </div>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti tema terang/gelap">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <span class="badge">Portofolio Karya</span>
+      <h1>Ruang-ruang yang kami rancang dan hidupkan.</h1>
+      <p>Koleksi karya hunian keluarga, ruang kerja butik, dan renovasi adaptif yang mengutamakan kenyamanan sirkulasi alami serta kejujuran material.</p>
+    </div>
+
+    <main>
+      <!-- Filter Tabs Interaktif -->
+      <div class="filter-tabs" style="justify-content:center;">
+        <button class="filter-btn active" data-filter="all" type="button">Semua Proyek (8)</button>
+        <button class="filter-btn" data-filter="residensial" type="button">Residensial</button>
+        <button class="filter-btn" data-filter="komersial" type="button">Komersial &amp; Publik</button>
+        <button class="filter-btn" data-filter="interior" type="button">Desain Interior</button>
+        <button class="filter-btn" data-filter="renovasi" type="button">Renovasi</button>
+      </div>
+
+      <!-- Grid Portofolio -->
+      <section style="border-top:none; padding-top:0.5rem;">
+        <div class="projects-grid">
+          <!-- Proyek 1 -->
+          <article class="project-card" data-category="residensial">
+            <div class="project-img-box">
+              <img class="project-img" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80" alt="Rumah Lorong di Depok">
+              <span class="project-tag">Residensial</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Depok, Jawa Barat</span>
+                <span>2024</span>
+              </div>
+              <h3>Rumah Lorong</h3>
+              <p>Hunian keluarga berdenah memanjang dengan lorong terbuka di tengah yang mengalirkan angin sejuk ke seluruh ruangan tidur.</p>
+            </div>
+          </article>
+
+          <!-- Proyek 2 -->
+          <article class="project-card" data-category="komersial">
+            <div class="project-img-box">
+              <img class="project-img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="Kantor Gandaria di Jakarta Selatan">
+              <span class="project-tag">Komersial</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Jakarta Selatan</span>
+                <span>2023</span>
+              </div>
+              <h3>Kantor Gandaria</h3>
+              <p>Ruang kerja butik agensi desain berfasad roster terakota yang memecah sengatan sinar matahari sore.</p>
+            </div>
+          </article>
+
+          <!-- Proyek 3 -->
+          <article class="project-card" data-category="interior">
+            <div class="project-img-box">
+              <img class="project-img" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80" alt="Kedai Pelataran di Tangerang">
+              <span class="project-tag">Interior</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Tangerang</span>
+                <span>2021</span>
+              </div>
+              <h3>Kedai Pelataran</h3>
+              <p>Penataan kafe santai dengan bangku cor teraso terpadu dan dinding semen ekspos yang memberikan suasana teduh.</p>
+            </div>
+          </article>
+
+          <!-- Proyek 4 -->
+          <article class="project-card" data-category="komersial">
+            <div class="project-img-box">
+              <img class="project-img" src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80" alt="Balai Warga Kebon di Bogor">
+              <span class="project-tag">Komersial</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Bogor, Jawa Barat</span>
+                <span>2022</span>
+              </div>
+              <h3>Balai Warga Kebon</h3>
+              <p>Paviliun komunitas terbuka berdinding kisi bambu laminasi dan atap teritisan lebar pelindung hujan deras lereng gunung.</p>
+            </div>
+          </article>
+
+          <!-- Proyek 5 -->
+          <article class="project-card" data-category="renovasi">
+            <div class="project-img-box">
+              <img class="project-img" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80" alt="Rumah Dua Halaman di Bekasi">
+              <span class="project-tag">Renovasi</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Bekasi</span>
+                <span>2019</span>
+              </div>
+              <h3>Rumah Dua Halaman</h3>
+              <p>Rekondisi rumah era 90-an yang sebelumnya pengap menjadi terang benderang dengan membobok inner courtyard di sisi samping.</p>
+            </div>
+          </article>
+
+          <!-- Proyek 6 -->
+          <article class="project-card" data-category="residensial">
+            <div class="project-img-box">
+              <img class="project-img" src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80" alt="Villa Cemara Teduh di Bandung">
+              <span class="project-tag">Residensial</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Lembang, Bandung</span>
+                <span>2024</span>
+              </div>
+              <h3>Villa Cemara Teduh</h3>
+              <p>Villa peristirahatan keluarga dengan dinding batu kali lokal dan bukaan jendela kaca besar berorientasi ke lembah hutan pinus.</p>
+            </div>
+          </article>
+
+          <!-- Proyek 7 -->
+          <article class="project-card" data-category="interior">
+            <div class="project-img-box">
+              <img class="project-img" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80" alt="Studio Keramik Selaras di Jakarta Selatan">
+              <span class="project-tag">Interior</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Jakarta Selatan</span>
+                <span>2023</span>
+              </div>
+              <h3>Studio Keramik Selaras</h3>
+              <p>Interior ruang lokakarya keramik dengan rak display kayu jati daur ulang dan pencahayaan skylight di atas meja putar tanah liat.</p>
+            </div>
+          </article>
+
+          <!-- Proyek 8 -->
+          <article class="project-card" data-category="renovasi">
+            <div class="project-img-box">
+              <img class="project-img" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80" alt="Paviliun Lembah Hijau di Yogyakarta">
+              <span class="project-tag">Renovasi</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>Sleman, Yogyakarta</span>
+                <span>2022</span>
+              </div>
+              <h3>Paviliun Lembah Hijau</h3>
+              <p>Perluasan paviliun tamu bernuansa joglo modern dengan peninggian plafon ekspos serta kisi kayu ventilasi silang.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Tabel Arsip Proyek -->
+      <section>
+        <h2 style="margin-bottom:2rem">Arsip Catatan Proyek</h2>
+        <div style="overflow-x:auto;">
+          <table class="card" style="width:100%; border-collapse:collapse; text-align:left;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--line); font-weight:600; color:var(--muted); font-size:0.9rem;">
+                <th style="padding:1rem 1.25rem;">Nama Proyek</th>
+                <th style="padding:1rem 1.25rem;">Kategori</th>
+                <th style="padding:1rem 1.25rem;">Lokasi</th>
+                <th style="padding:1rem 1.25rem;">Tahun</th>
+                <th style="padding:1rem 1.25rem;">Status</th>
+              </tr>
+            </thead>
+            <tbody style="font-size:0.95rem;">
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:1.1rem 1.25rem; font-weight:600; font-family:var(--serif);">Rumah Lorong</td>
+                <td style="padding:1.1rem 1.25rem; color:var(--muted);">Residensial</td>
+                <td style="padding:1.1rem 1.25rem;">Depok</td>
+                <td style="padding:1.1rem 1.25rem;">2024</td>
+                <td style="padding:1.1rem 1.25rem;"><span class="badge" style="margin:0">Selesai</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:1.1rem 1.25rem; font-weight:600; font-family:var(--serif);">Villa Cemara Teduh</td>
+                <td style="padding:1.1rem 1.25rem; color:var(--muted);">Residensial</td>
+                <td style="padding:1.1rem 1.25rem;">Bandung</td>
+                <td style="padding:1.1rem 1.25rem;">2024</td>
+                <td style="padding:1.1rem 1.25rem;"><span class="badge" style="margin:0">Selesai</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:1.1rem 1.25rem; font-weight:600; font-family:var(--serif);">Kantor Gandaria</td>
+                <td style="padding:1.1rem 1.25rem; color:var(--muted);">Komersial</td>
+                <td style="padding:1.1rem 1.25rem;">Jakarta Selatan</td>
+                <td style="padding:1.1rem 1.25rem;">2023</td>
+                <td style="padding:1.1rem 1.25rem;"><span class="badge" style="margin:0">Selesai</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:1.1rem 1.25rem; font-weight:600; font-family:var(--serif);">Studio Keramik Selaras</td>
+                <td style="padding:1.1rem 1.25rem; color:var(--muted);">Interior</td>
+                <td style="padding:1.1rem 1.25rem;">Jakarta Selatan</td>
+                <td style="padding:1.1rem 1.25rem;">2023</td>
+                <td style="padding:1.1rem 1.25rem;"><span class="badge" style="margin:0">Selesai</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:1.1rem 1.25rem; font-weight:600; font-family:var(--serif);">Balai Warga Kebon</td>
+                <td style="padding:1.1rem 1.25rem; color:var(--muted);">Komersial &amp; Publik</td>
+                <td style="padding:1.1rem 1.25rem;">Bogor</td>
+                <td style="padding:1.1rem 1.25rem;">2022</td>
+                <td style="padding:1.1rem 1.25rem;"><span class="badge" style="margin:0">Selesai</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:1.1rem 1.25rem; font-weight:600; font-family:var(--serif);">Paviliun Lembah Hijau</td>
+                <td style="padding:1.1rem 1.25rem; color:var(--muted);">Renovasi</td>
+                <td style="padding:1.1rem 1.25rem;">Yogyakarta</td>
+                <td style="padding:1.1rem 1.25rem;">2022</td>
+                <td style="padding:1.1rem 1.25rem;"><span class="badge" style="margin:0">Selesai</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CTA Banner -->
+      <div class="cta-banner">
+        <div>
+          <h2>Ingin karya Anda menjadi bagian dari portofolio kami selanjutnya?</h2>
+          <p>Diskusikan lahan atau rencana renovasi bangunan Anda bersama tim arsitek kami.</p>
+        </div>
+        <a class="btn" href="kontak.html">Mulai Percakapan Proyek →</a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Studio Teduh</h3>
+          <p>Praktik arsitektur dan interior berkelanjutan di Jakarta. Menciptakan hunian dan ruang komunitas yang sejuk, jujur, dan lestari.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Halaman</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="projek.html">Portofolio</a></li>
+            <li><a href="tim.html">Tim Studio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Akses Klien</h4>
+          <ul>
+            <li><a href="kontak.html">Formulir Konsultasi</a></li>
+            <li><a href="login.html">Masuk Portal</a></li>
+            <li><a href="register.html">Daftar Akun Klien</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <p style="margin-bottom:0.5rem">Jl. Cikajang No. 18, Kebayoran Baru, Jakarta Selatan 12170</p>
+          <p><a href="mailto:halo@studioteduh.example">halo@studioteduh.example</a><br>+62 21 726 8920</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Studio Teduh. Seluruh hak cipta dilindungi.</span>
+        <span>Arsitektur &amp; Interior Tropis Bersahaja</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

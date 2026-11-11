@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Daftar Akun Klien – Studio Teduh</title>
+  <meta name="description" content="Pendaftaran akun klien baru Studio Teduh untuk konsultasi desain arsitektur dan pemantauan proyek.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <!-- Header Minimal -->
+    <header>
+      <a class="logo" href="index.html">
+        <span class="logo-dot"></span>Studio Teduh
+      </a>
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <a class="nav-btn" href="index.html">← Beranda</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti tema terang/gelap">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Auth Card Area -->
+    <div class="auth-wrapper">
+      <div class="auth-card" style="max-width:520px;">
+        <a class="auth-back" href="index.html">← Kembali ke Beranda</a>
+
+        <!-- Thumbnail Foto Arsitektur Pendukung -->
+        <div style="height:140px; border-radius:var(--radius-md); overflow:hidden; margin-bottom:1.5rem; border:1px solid var(--line);">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Hunian tropis minimalis Studio Teduh" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+
+        <div class="auth-header">
+          <span class="badge">Registrasi Klien Baru</span>
+          <h1>Daftar Akun Klien</h1>
+          <p>Mulai perjalanan merancang ruang impian Anda, simpan inspirasi material, dan koordinasikan jadwal konsultasi bersama kami.</p>
+        </div>
+
+        <form id="registerForm" novalidate>
+          <div class="form-group">
+            <label for="regName">Nama Lengkap <span style="color:#E57373">*</span></label>
+            <input class="form-control" type="text" id="regName" placeholder="Contoh: Budi Santoso" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="regEmail">Alamat Email <span style="color:#E57373">*</span></label>
+              <input class="form-control" type="email" id="regEmail" placeholder="nama@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="regPhone">Nomor WhatsApp <span style="color:#E57373">*</span></label>
+              <input class="form-control" type="tel" id="regPhone" placeholder="0812-xxxx-xxxx" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="regRole">Tipe Klien / Keperluan Desain</label>
+            <select class="form-control" id="regRole">
+              <option value="owner">Pemilik Rumah Tinggal Pribadi</option>
+              <option value="commercial">Pemilik Usaha / Komersial / Kafe</option>
+              <option value="developer">Pengembang Properti / Developer Butik</option>
+              <option value="partner">Mitra Kontraktor / Konsultan Lain</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="regPassword">Kata Sandi Baru <span style="color:#E57373">*</span></label>
+            <div class="password-input-wrap">
+              <input class="form-control" type="password" id="regPassword" placeholder="Minimal 6 karakter kombinasi" required>
+              <button class="btn-toggle-pwd" type="button" aria-label="Tampilkan password">👁️</button>
+            </div>
+            <div class="pwd-strength-bar">
+              <div class="pwd-strength-fill" id="pwdStrengthBar"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="regConfirmPassword">Ulangi Kata Sandi <span style="color:#E57373">*</span></label>
+            <div class="password-input-wrap">
+              <input class="form-control" type="password" id="regConfirmPassword" placeholder="Ketik ulang kata sandi" required>
+              <button class="btn-toggle-pwd" type="button" aria-label="Tampilkan password">👁️</button>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom:1.5rem;">
+            <label class="checkbox-label">
+              <input type="checkbox" id="agreeTerms" required checked>
+              <span>Saya menyetujui Ketentuan Layanan dan Kebijakan Privasi Studio Teduh.</span>
+            </label>
+          </div>
+
+          <button class="btn" type="submit" style="width:100%; padding:0.9rem; font-size:1rem;">
+            Daftar Akun Sekarang →
+          </button>
+        </form>
+
+        <div class="auth-footer">
+          Sudah memiliki akun portal klien? <a href="login.html">Masuk di sini</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
